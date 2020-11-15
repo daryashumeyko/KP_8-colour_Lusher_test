@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name">
+    </TextView>
+
+    <Button
+        android:id="@+id/btnEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="Entry"
+        android:textColor="#361247" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="Hello!"
+        android:textColor="#F5DCFA"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Welcome to our application!"
+        android:textColor="#F5DCFA"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/btnTestDescription"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:ems="10"
+        android:layout_marginTop="40dp"
+        android:padding="15sp"
+        android:text="Phychological 8-colour Lusher test"
+        android:textColor="#361247"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Во время теста вам будут показаны карточки с различными цветами. Ваша задача - указать, какой цвет вам нравится больше других в данный момент времени. Не пытайтесь ассоциировать цвета ни с чем посторонним. Просто выбирайте карточки, к которым вы чувствуете большую симпатию по сравнению с остальными."
+        android:textColor="#C0B8CD"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="Start"
+        android:layout_marginTop="20dp"
+        android:textColor="#361247"
+        android:textSize="18sp" />
+
+</LinearLayout>

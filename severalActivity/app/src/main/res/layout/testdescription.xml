@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Description:"
+        android:textColor="#E39BEF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цветовой тест Люшера - психологический тест, разработанный доктором Максом Люшером. Цветовая диагностика Люшера позволяет измерить психофизиологическое состояние человека, его стрессоустойчивость, активность и коммуникативныее способности. Тест Люшера позволяет понять причины психологического стресса, который может привести к появлению психологических симптомов."
+        android:layout_marginTop="15dp"
+        android:textColor="#C0B8CD"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="Go to the test"
+        android:textColor="#361247"
+        android:textSize="18sp"></Button>
+
+</LinearLayout>
