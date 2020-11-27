@@ -6,13 +6,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityTest extends Activity implements OnClickListener {
     final String TAG = "ActivityTest";
@@ -20,7 +23,10 @@ public class ActivityTest extends Activity implements OnClickListener {
     ToggleButton[] buttons = new ToggleButton[8];
     int[] SelectedColours = new int[8];
     int step = 0;
+    int question = 1;
+
     Button btnPrevious; Button btnNext;
+    TextView numberquestion;
     //private Chronometer mChronometer;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -40,6 +46,8 @@ public class ActivityTest extends Activity implements OnClickListener {
         btnPrevious.setOnClickListener(this);
         btnNext = (Button) findViewById(R.id.btnNext);
         btnNext.setOnClickListener(this);
+        numberquestion = (TextView) findViewById(R.id.numberquestion);
+        numberquestion.setOnClickListener(this);
 
         //mChronometer = findViewById(R.id.chronometer);
         //mChronometer.setCountDown(true);
@@ -47,6 +55,12 @@ public class ActivityTest extends Activity implements OnClickListener {
         //mChronometer.setBase(SystemClock.elapsedRealtime() + 1000 * 5);
         Log.d(TAG, "ActivityTest: onCreate()");
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }*/
 
     public void onToggleButtonClick(View button) {
         Boolean checked = ((ToggleButton) button).isChecked();
@@ -101,6 +115,7 @@ public class ActivityTest extends Activity implements OnClickListener {
         switch (v.getId()){
             case R.id.btnPrevious:
                 step--;
+                question--;
                 for(int i = 0; i < 8; ++i) {
                     if(i < step) {
                         buttons[SelectedColours[i]].setVisibility(View.INVISIBLE);
@@ -115,22 +130,25 @@ public class ActivityTest extends Activity implements OnClickListener {
                     }
                 }
                 btnPrevious.setEnabled(step > 0);
+                numberquestion.setText(Integer.toString(question));
                 btnNext.setEnabled(true);
                 btnNext.setText("THE NEXT QUESTION");
                 break;
             case R.id.btnNext:
                 for(int i = 0; i < 8; ++i) {
                     if(buttons[i].isChecked()) {
-                        SelectedColours[step] = i;
+                        SelectedColours[this.step] = i;
                         buttons[i].setVisibility(View.INVISIBLE);
                         break;
                     }
                 }
-                step++;
+                this.step++;
+                this.question++;
+                numberquestion.setText(Integer.toString(question));
                 btnNext.setEnabled(false);
                 btnPrevious.setEnabled(true);
 
-                if (step == 8){
+                if (this.step == 8){
                     Intent intent = new Intent(this, ActivityResult.class);
                     startActivity(intent);
                 }

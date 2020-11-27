@@ -45,6 +45,10 @@
             android:name=".ActivityTask"
             android:label="ActivityTask">
         </activity>
+        <activity
+            android:name=".ActivitySeeAccount"
+            android:label="ActivitySeeAccount">
+        </activity>
     </application>
 
 </manifest>

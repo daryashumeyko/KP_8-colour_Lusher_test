@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Fill in the data"
+        android:text="My account"
         android:textColor="#BCA3EA"
         android:textSize="18sp" />
 
@@ -150,14 +150,14 @@
         android:textSize="10sp" />
 
     <Button
-        android:id="@+id/btnEntry"
+        android:id="@+id/btnEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/button"
         android:padding="15sp"
-        android:text="SIGN UP"
+        android:text="EDIT"
         android:textColor="#361247"
         android:textSize="16sp"></Button>
 

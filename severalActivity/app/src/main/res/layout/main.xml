@@ -45,7 +45,7 @@
 
     <Button
         android:id="@+id/btnTestDescription"
-        android:layout_width="213dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
@@ -54,5 +54,5 @@
         android:padding="15sp"
         android:text="Phychological 8-colour Lusher test"
         android:textColor="#361247"
-        android:textSize="18sp" />
+        android:textSize="25sp" />
 </LinearLayout>

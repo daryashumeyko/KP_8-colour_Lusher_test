@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name">
+    </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Entry"
+        android:textColor="#F0A6FF"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textForgetPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter the email that you used to sign in"
+        android:layout_marginTop="5dp"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fileds"
+        android:padding="15sp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSendPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="Send password to email"
+        android:textColor="#361247"
+        android:textSize="18sp" />
+
+</LinearLayout>

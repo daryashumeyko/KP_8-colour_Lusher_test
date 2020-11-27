@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityTask extends Activity implements OnClickListener {
     final String TAG = "ActivityTask";
@@ -21,6 +24,13 @@ public class ActivityTask extends Activity implements OnClickListener {
         btnTest.setOnClickListener(this);
         Log.d(TAG, "ActivityTask: onCreate()");
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }*/
+
     @Override
     protected void onRestart() {
         super.onRestart();

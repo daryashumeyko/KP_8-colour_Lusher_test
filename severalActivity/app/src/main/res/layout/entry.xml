@@ -7,6 +7,7 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -60,7 +61,7 @@
 
     <Button
         android:id="@+id/btnTestDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
@@ -68,28 +69,30 @@
         android:layout_marginTop="20dp"
         android:text="Sign in"
         android:textColor="#361247"
-        android:textSize="18sp"></Button>
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnFgtPsw"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
         android:padding="15sp"
         android:layout_marginTop="10dp"
         android:text="Forget the password"
-        android:textColor="#361247" />
+        android:textColor="#361247"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnNewAccount"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
         android:padding="15sp"
-        android:layout_marginTop="10dp"
-        android:text="Create new account"
-        android:textColor="#361247" />
+        android:layout_marginTop="80dp"
+        android:text="SIGN UP"
+        android:textColor="#361247"
+        android:textSize="18sp"/>
 
 </LinearLayout>

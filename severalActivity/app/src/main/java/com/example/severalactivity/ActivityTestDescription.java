@@ -4,14 +4,18 @@ package com.example.severalactivity;
         import android.content.Intent;
         import android.os.Bundle;
         import android.util.Log;
+        import android.view.Menu;
         import android.view.View;
         import android.view.View.OnClickListener;
         import android.widget.Button;
+
+        import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityTestDescription extends Activity implements OnClickListener {
     final String TAG = "ActivityTestDescription";
 
     Button btnTask;
+    Button btnSeeAccount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,8 +23,17 @@ public class ActivityTestDescription extends Activity implements OnClickListener
         setContentView(R.layout.testdescription);
         btnTask = (Button) findViewById(R.id.btnTask);
         btnTask.setOnClickListener(this);
+        btnSeeAccount = (Button) findViewById(R.id.btnSeeAccount);
+        btnSeeAccount.setOnClickListener(this);
         Log.d(TAG, "ActivityTestDescription: onCreate()");
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }*/
+
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -53,8 +66,18 @@ public class ActivityTestDescription extends Activity implements OnClickListener
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityTask.class);
-        startActivity(intent);
+        switch (v.getId()){
+            case R.id.btnTask:
+                Intent intent = new Intent(this, ActivityTask.class);
+                startActivity(intent);
+                break;
+            case R.id.btnSeeAccount:
+                Intent intent2 = new Intent(this, ActivitySeeAccount.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
         Log.d(TAG, "ActivityTestDescription: onClick()");
     }
 }

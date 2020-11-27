@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 
 import java.sql.Connection;
@@ -17,6 +19,8 @@ import java.sql.Statement;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
     final String TAG = "MainActivity";
@@ -33,12 +37,22 @@ public class MainActivity extends Activity implements OnClickListener {
         btnEntry.setOnClickListener(this);
         btnTestDescription = (Button) findViewById(R.id.btnTestDescription);
         btnTestDescription.setOnClickListener(this);
+
+        /*requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.custom_title_bar);
+*/
         //resultArea = new TextView(this);
         //resultArea.setText("Please wait.");
         //setContentView(resultArea);
         Log.d(TAG, "MainActivity: onCreate()");
         //new FetchSQL().execute();
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }*/
 
 /*    private class FetchSQL extends AsyncTask<Void,Void,String> {
         @Override

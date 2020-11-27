@@ -9,20 +9,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class ActivitySeeAccount extends Activity implements OnClickListener{
+    final String TAG = "ActivitySeeAccount";
 
-public class ActivityForgetPsw extends Activity implements OnClickListener{
-    final String TAG = "ActivityForgetPsw";
-
-    Button btnSendPsw;
+    Button btnEdit;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgetpsw);
-        btnSendPsw = (Button) findViewById(R.id.btnSendPsw);
-        btnSendPsw.setOnClickListener(this);
-        Log.d(TAG, "ActivityForgetPsw: onCreate()");
+        setContentView(R.layout.seeaccount);
+        btnEdit = (Button) findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(this);
+        Log.d(TAG, "ActivitySeeAccount: onCreate()");
     }
 
     /*@Override
@@ -34,37 +32,37 @@ public class ActivityForgetPsw extends Activity implements OnClickListener{
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "ActivityForgetPsw: onRestart()");
+        Log.d(TAG, "ActivitySeeAccount: onRestart()");
     }
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "ActivityForgetPsw: onStart()");
+        Log.d(TAG, "ActivitySeeAccount: onStart()");
     }
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "ActivityForgetPsw: onResume()");
+        Log.d(TAG, "ActivitySeeAccount: onResume()");
     }
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "ActivityForgetPsw: onPause()");
+        Log.d(TAG, "ActivitySeeAccount: onPause()");
     }
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "ActivityForgetPsw: onStop()");
+        Log.d(TAG, "ActivitySeeAccount: onStop()");
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "ActivityForgetPsw: onDestroy()");
+        Log.d(TAG, "ActivitySeeAccount: onDestroy()");
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityEntry.class);
+        Intent intent = new Intent(this, ActivitySeeAccount.class);
         startActivity(intent);
-        Log.d(TAG, "ActivityForgetPsw: onClick()");
+        Log.d(TAG, "ActivitySeeAccount: onClick()");
     }
 }
