@@ -49,12 +49,21 @@ public class ActivityTest extends Activity implements OnClickListener {
         numberquestion = (TextView) findViewById(R.id.numberquestion);
         numberquestion.setOnClickListener(this);
 
-        //mChronometer = findViewById(R.id.chronometer);
+        //this.mChronometer = findViewById(R.id.chronometer);
+        //doStart();
         //mChronometer.setCountDown(true);
         // установим начальное значение
         //mChronometer.setBase(SystemClock.elapsedRealtime() + 1000 * 5);
         Log.d(TAG, "ActivityTest: onCreate()");
     }
+
+    //private void doStart()  {
+        // Returns milliseconds since system boot, including time spent in sleep.
+        //long elapsedRealtime = SystemClock.elapsedRealtime();
+        // Set the time that the count-up timer is in reference to.
+        //this.mChronometer.setBase(elapsedRealtime);
+        //this.mChronometer.start();
+    //}
 
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {

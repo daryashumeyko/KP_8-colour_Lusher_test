@@ -63,7 +63,7 @@ public class ActivityNewAccount extends Activity implements OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityEntry.class);
+        Intent intent = new Intent(this, ActivityTestDescription.class);
         startActivity(intent);
         Log.d(TAG, "ActivityNewAccount: onClick()");
     }

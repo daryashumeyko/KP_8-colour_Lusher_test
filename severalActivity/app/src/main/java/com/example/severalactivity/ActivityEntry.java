@@ -17,6 +17,7 @@ public class ActivityEntry extends Activity implements OnClickListener{
     Button btnTestDescription;
     Button btnFgtPsw;
     Button btnNewAccount;
+    Button btnAdminPage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class ActivityEntry extends Activity implements OnClickListener{
         btnFgtPsw.setOnClickListener(this);
         btnNewAccount = (Button) findViewById(R.id.btnNewAccount);
         btnNewAccount.setOnClickListener(this);
+        btnAdminPage = (Button) findViewById(R.id.btnAdminPage);
+        btnAdminPage.setOnClickListener(this);
         Log.d(TAG, "ActivityEntry: onCreate()");
     }
 
@@ -81,6 +84,10 @@ public class ActivityEntry extends Activity implements OnClickListener{
             case R.id.btnNewAccount:
                 Intent intent3 = new Intent(this, ActivityNewAccount.class);
                 startActivity(intent3);
+                break;
+            case R.id.btnAdminPage:
+                Intent intent4 = new Intent(this, ActivityAdminPage.class);
+                startActivity(intent4);
                 break;
             default:
                 break;

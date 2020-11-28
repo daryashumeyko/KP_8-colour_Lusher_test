@@ -49,6 +49,14 @@
             android:name=".ActivitySeeAccount"
             android:label="ActivitySeeAccount">
         </activity>
+        <activity
+            android:name=".ActivityAdminPage"
+            android:label="ActivityAdminPage">
+        </activity>
+        <activity
+            android:name=".ActivityUsers"
+            android:label="ActivityUsers">
+        </activity>
     </application>
 
 </manifest>
