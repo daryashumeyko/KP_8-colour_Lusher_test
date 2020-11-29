@@ -25,11 +25,11 @@ public class ActivityTask extends Activity implements OnClickListener {
         Log.d(TAG, "ActivityTask: onCreate()");
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onRestart() {

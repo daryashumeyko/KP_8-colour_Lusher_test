@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
-        android:columnCount="3"
+        android:columnCount="4"
         android:orientation="horizontal" >
 
         <TextView
@@ -39,7 +39,17 @@
             android:textColor="#673AB7"
             android:textSize="18sp" />
 
-        <Chronometer/>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:layout_gravity="right"
+            android:textSize="13pt"/>
 
     </GridLayout>
 
@@ -49,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Какой из этих цветов кажется вам наиболее симпатичным?"
+        android:text="Which of these colors do you like most of all?"
         android:textColor="#1F0A43"
         android:textSize="18sp" />
 

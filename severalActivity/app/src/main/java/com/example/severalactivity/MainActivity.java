@@ -1,6 +1,8 @@
 package com.example.severalactivity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
     final String TAG = "MainActivity";
 
     Button btnEntry;
+    Button btnExit;
     Button btnTestDescription;
     //TextView resultArea;
 
@@ -37,6 +40,8 @@ public class MainActivity extends Activity implements OnClickListener {
         btnEntry.setOnClickListener(this);
         btnTestDescription = (Button) findViewById(R.id.btnTestDescription);
         btnTestDescription.setOnClickListener(this);
+        btnExit = (Button) findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(this);
 
         /*requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.custom_title_bar);
@@ -48,13 +53,13 @@ public class MainActivity extends Activity implements OnClickListener {
         //new FetchSQL().execute();
     }
 
-    /*@Override
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
-    }*/
+    }
 
-/*    private class FetchSQL extends AsyncTask<Void,Void,String> {
+    private class FetchSQL extends AsyncTask<Void,Void,String> {
         @Override
         protected String doInBackground(Void... params) {
             resultArea.setText("1");
@@ -140,6 +145,21 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.btnTestDescription:
                 Intent intent2 = new Intent(this, ActivityTestDescription.class);
                 startActivity(intent2);
+                break;
+            case R.id.btnExit:
+                new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                        .setMessage("Are you sure?")
+                        .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Intent intent = new Intent(Intent.ACTION_MAIN);
+                                intent.addCategory(Intent.CATEGORY_HOME);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).setNegativeButton("no", null).show();
                 break;
             default:
                 break;

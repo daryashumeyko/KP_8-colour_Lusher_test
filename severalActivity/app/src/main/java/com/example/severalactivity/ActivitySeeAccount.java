@@ -23,11 +23,11 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
         Log.d(TAG, "ActivitySeeAccount: onCreate()");
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onRestart() {
@@ -61,7 +61,7 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivitySeeAccount.class);
+        Intent intent = new Intent(this, ActivityEditAccount.class);
         startActivity(intent);
         Log.d(TAG, "ActivitySeeAccount: onClick()");
     }

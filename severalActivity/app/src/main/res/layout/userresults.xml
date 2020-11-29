@@ -18,21 +18,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="My account"
+        android:text="User results:"
         android:textColor="#BCA3EA"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textName"
+        android:id="@+id/textDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Full name:"
+        android:text="Date:"
         android:layout_marginTop="3dp"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/text780"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desired goals, or behavior dictated by desired goals:"
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -44,45 +62,49 @@
         android:id="@+id/textFemale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender:"
+        android:text="Existing situation, or behavior appropriate to the existing situation:"
         android:layout_marginTop="3dp"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <TextView
+        android:id="@+id/text6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <RadioButton
-            android:id="@+id/radioButtonMale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textColor="#63EDFF" />
-
-        <RadioButton
-            android:id="@+id/radioButtonFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"
-            android:textColor="#63EDFF" />
-    </RadioGroup>
+        android:text=""
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textBirthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Birthday:"
+        android:text="Behavior traits that are inhibited or inappropriate for the current situation:"
         android:layout_marginTop="3dp"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/text7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Rejected or suppressed behaviors or sources of anxiety:"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -95,29 +117,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:text="Email:"
+        android:text="Existing problem or stress-related behavior:"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text4"
+        android:id="@+id/text9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:text=""
+        android:text="Anxiety score:"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
-    
-    <Button
-        android:id="@+id/btnEdit"
+
+    <TextView
+        android:id="@+id/text78"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:padding="15sp"
-        android:text="EDIT"
-        android:textColor="#361247"
-        android:textSize="16sp"></Button>
+        android:text=""
+        android:layout_marginTop="3dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
 
 </LinearLayout>

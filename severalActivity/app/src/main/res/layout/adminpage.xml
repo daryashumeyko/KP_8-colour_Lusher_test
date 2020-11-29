@@ -21,20 +21,8 @@
         android:layout_gravity="center"
         android:background="@drawable/button"
         android:padding="15sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:text="Users"
-        android:textColor="#361247"
-        android:textSize="18sp"/>
-
-    <Button
-        android:id="@+id/btnResults"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/button"
-        android:padding="15sp"
-        android:layout_marginTop="20dp"
-        android:text="results of the test"
         android:textColor="#361247"
         android:textSize="18sp"/>
 

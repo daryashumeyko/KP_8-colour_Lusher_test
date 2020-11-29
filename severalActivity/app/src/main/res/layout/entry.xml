@@ -15,15 +15,6 @@ android:layout_height="match_parent">
 </TextView>
 
 <TextView
-    android:id="@+id/textView3"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:text="Entry"
-    android:textColor="#F0A6FF"
-    android:textSize="24sp" />
-
-<TextView
     android:id="@+id/textLogin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -106,5 +97,7 @@ android:layout_height="match_parent">
         android:text="Admin page"
         android:textColor="#361247"
         android:textSize="18sp"/>
+
+
 
 </LinearLayout>

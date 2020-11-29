@@ -37,7 +37,7 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Цветовой тест Люшера - психологический тест, разработанный доктором Максом Люшером. Цветовая диагностика Люшера позволяет измерить психофизиологическое состояние человека, его стрессоустойчивость, активность и коммуникативныее способности. Тест Люшера позволяет понять причины психологического стресса, который может привести к появлению психологических симптомов."
+        android:text="The Luscher color test is a psychological test developed by Dr. Max Luscher. Luscher's color diagnostics allows you to measure the psychophysiological state of a person, his resistance to stress, activity and communication skills. The Luscher test provides insight into the causes of psychological stress that can lead to psychological symptoms."
         android:layout_marginTop="15dp"
         android:textColor="#C0B8CD"
         android:textSize="18sp" />

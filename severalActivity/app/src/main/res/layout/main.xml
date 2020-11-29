@@ -7,21 +7,48 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
+
+
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name">
     </TextView>
 
-    <Button
-        android:id="@+id/btnEntry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@drawable/button"
-        android:padding="15sp"
-        android:text="Entry"
-        android:textColor="#361247" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/button"
+            android:padding="15sp"
+            android:text="Exit"
+            android:textColor="#361247" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/button"
+            android:padding="15sp"
+            android:text="Entry"
+            android:textColor="#361247" />
+
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/textView"

@@ -7,60 +7,55 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityUsers extends Activity implements View.OnClickListener {
-    final String TAG = "ActivityUsers";
+public class ActivityUserResults extends Activity implements View.OnClickListener {
+    final String TAG = "ActivityUserResults";
 
-    Button btnDetails;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.users);
-        btnDetails = (Button) findViewById(R.id.btnDetails);
-        btnDetails.setOnClickListener(this);
-        Log.d(TAG, "ActivityUsers: onCreate()");
+        setContentView(R.layout.userresults);
+        Log.d(TAG, "ActivityUserResults: onCreate()");
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), ActivityAdminPage.class);
+        Intent intent = new Intent(getApplicationContext(), ActivityUserDetails.class);
         startActivity(intent);
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "ActivityUsers: onRestart()");
+        Log.d(TAG, "ActivityUserResults: onRestart()");
     }
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "ActivityUsers: onStart()");
+        Log.d(TAG, "ActivityUserResults: onStart()");
     }
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "ActivityUsers: onResume()");
+        Log.d(TAG, "ActivityUserResults: onResume()");
     }
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "ActivityUsers: onPause()");
+        Log.d(TAG, "ActivityUserResults: onPause()");
     }
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "ActivityUsers: onStop()");
+        Log.d(TAG, "ActivityUserResults: onStop()");
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "ActivityUsers: onDestroy()");
+        Log.d(TAG, "ActivityUserResults: onDestroy()");
     }
     @Override
     public void onClick(View v) {
-                Intent intent = new Intent(this, ActivityUserDetails.class);
-                startActivity(intent);
-        Log.d(TAG, "ActivityUsers: onClick()");
+        Log.d(TAG, "ActivityUserResults: onClick()");
     }
 }

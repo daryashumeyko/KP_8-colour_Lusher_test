@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="My account"
+        android:text="User details"
         android:textColor="#BCA3EA"
         android:textSize="18sp" />
 
@@ -32,7 +32,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/text4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -82,7 +82,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/text7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -91,7 +91,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
@@ -100,23 +100,35 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/text4"
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
         android:text=""
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
-    
+
     <Button
-        android:id="@+id/btnEdit"
+        android:id="@+id/btnResults"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/button"
         android:padding="15sp"
-        android:text="EDIT"
+        android:text="Results"
+        android:textColor="#361247"
+        android:textSize="16sp"></Button>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="delete user"
         android:textColor="#361247"
         android:textSize="16sp"></Button>
 

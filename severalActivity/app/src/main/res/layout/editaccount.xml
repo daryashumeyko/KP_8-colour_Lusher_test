@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="My account"
+        android:text="Edit account"
         android:textColor="#BCA3EA"
         android:textSize="18sp" />
 
@@ -31,14 +31,15 @@
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/text2"
+    <EditText
+        android:id="@+id/FullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_marginTop="3dp"
-        android:textColor="#F5DCFA"
-        android:textSize="14sp" />
+        android:background="@drawable/fileds"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="15sp"
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/textFemale"
@@ -81,42 +82,82 @@
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/text3"
+    <EditText
+        android:id="@+id/editTextBirthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_marginTop="3dp"
-        android:textColor="#F5DCFA"
-        android:textSize="14sp" />
+        android:background="@drawable/fileds"
+        android:ems="10"
+        android:inputType="date"
+        android:padding="15sp"
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:text="Email:"
+        android:text="Email: *"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
 
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fileds"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="15sp"
+        android:textSize="10sp" />
+
     <TextView
-        android:id="@+id/text4"
+        android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:text=""
+        android:text="Password: *"
         android:textColor="#F5DCFA"
         android:textSize="14sp" />
-    
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fileds"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="15sp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Confirm password: *"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fileds"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="15sp"
+        android:textSize="10sp" />
+
     <Button
-        android:id="@+id/btnEdit"
+        android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/button"
         android:padding="15sp"
-        android:text="EDIT"
+        android:text="save"
         android:textColor="#361247"
         android:textSize="16sp"></Button>
 

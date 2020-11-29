@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Во время теста вам будут показаны карточки с различными цветами. Ваша задача - указать, какой цвет вам нравится больше других в данный момент времени. Не пытайтесь ассоциировать цвета ни с чем посторонним. Просто выбирайте карточки, к которым вы чувствуете большую симпатию по сравнению с остальными."
+        android:text="During the test, we will show you cards with different colors. Your task is to indicate which color you like more than others. Don't try to associate colors with anything outsider. Just choose cards that you feel more sympathetic to than the rest."
         android:textColor="#C0B8CD"
         android:textSize="18sp" />
 

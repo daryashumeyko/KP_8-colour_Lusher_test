@@ -1,9 +1,12 @@
 package com.example.severalactivity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.Menu;
@@ -24,9 +27,11 @@ public class ActivityTest extends Activity implements OnClickListener {
     int[] SelectedColours = new int[8];
     int step = 0;
     int question = 1;
+    CountDownTimer timer;
 
     Button btnPrevious; Button btnNext;
     TextView numberquestion;
+    private TextView mTimer;
     //private Chronometer mChronometer;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -49,27 +54,39 @@ public class ActivityTest extends Activity implements OnClickListener {
         numberquestion = (TextView) findViewById(R.id.numberquestion);
         numberquestion.setOnClickListener(this);
 
-        //this.mChronometer = findViewById(R.id.chronometer);
-        //doStart();
-        //mChronometer.setCountDown(true);
-        // установим начальное значение
-        //mChronometer.setBase(SystemClock.elapsedRealtime() + 1000 * 5);
-        Log.d(TAG, "ActivityTest: onCreate()");
+        mTimer = (TextView) findViewById(R.id.time);
+
+        //Создаем таймер обратного отсчета на 60 секунд с шагом отсчета
+        //в 1 секунду (задаем значения в миллисекундах):
+        timer = new CountDownTimer(61000, 1000)  {
+
+            //Здесь обновляем текст счетчика обратного отсчета с каждой секундой
+            public void onTick(long millisUntilFinished) {
+                mTimer.setText(" " + millisUntilFinished / 1000);
+            }
+            //Задаем действия после завершения отсчета (высвечиваем надпись "Бабах!"):
+            public void onFinish() {
+                Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+        timer.start();
     }
 
-    //private void doStart()  {
-        // Returns milliseconds since system boot, including time spent in sleep.
-        //long elapsedRealtime = SystemClock.elapsedRealtime();
-        // Set the time that the count-up timer is in reference to.
-        //this.mChronometer.setBase(elapsedRealtime);
-        //this.mChronometer.start();
-    //}
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                .setMessage("Do you want to abort the test?")
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }).setNegativeButton("no", null).show();
+    }
 
     public void onToggleButtonClick(View button) {
         Boolean checked = ((ToggleButton) button).isChecked();
@@ -85,6 +102,8 @@ public class ActivityTest extends Activity implements OnClickListener {
         }
         btnNext.setEnabled(checked);
     }
+
+
 
     @Override
     protected void onRestart() {
@@ -160,6 +179,7 @@ public class ActivityTest extends Activity implements OnClickListener {
                 if (this.step == 8){
                     Intent intent = new Intent(this, ActivityResult.class);
                     startActivity(intent);
+                    timer.cancel();
                 }
                 break;
             default:

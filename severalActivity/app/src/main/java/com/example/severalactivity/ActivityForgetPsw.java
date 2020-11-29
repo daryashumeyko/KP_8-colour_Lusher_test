@@ -25,11 +25,11 @@ public class ActivityForgetPsw extends Activity implements OnClickListener{
         Log.d(TAG, "ActivityForgetPsw: onCreate()");
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), ActivityEntry.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onRestart() {
