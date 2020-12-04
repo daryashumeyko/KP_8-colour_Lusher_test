@@ -17,7 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 public class ActivityEntry extends Activity implements OnClickListener{
     final String TAG = "ActivityEntry";
 
-    Button btnTestDescription;
+    Button btnMain;
     Button btnFgtPsw;
     Button btnNewAccount;
     Button btnAdminPage;
@@ -26,8 +26,8 @@ public class ActivityEntry extends Activity implements OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry);
-        btnTestDescription = (Button) findViewById(R.id.btnTestDescription);
-        btnTestDescription.setOnClickListener(this);
+        btnMain = (Button) findViewById(R.id.btnMain);
+        btnMain.setOnClickListener(this);
         btnFgtPsw = (Button) findViewById(R.id.btnFgtPsw);
         btnFgtPsw.setOnClickListener(this);
         btnNewAccount = (Button) findViewById(R.id.btnNewAccount);
@@ -81,8 +81,8 @@ public class ActivityEntry extends Activity implements OnClickListener{
                 Intent intent = new Intent(this, ActivityForgetPsw.class);
                 startActivity(intent);
                 break;
-            case R.id.btnTestDescription:
-                Intent intent2 = new Intent(this, ActivityTestDescription.class);
+            case R.id.btnMain:
+                Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.btnNewAccount:

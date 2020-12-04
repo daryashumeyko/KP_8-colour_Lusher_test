@@ -7,16 +7,22 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name">
-    </TextView>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="TEST"
+        android:fontFamily="casual"
+        android:textColor="#413e5e"
+        android:textSize="18sp" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@color/colorPrimary"
         android:columnCount="4"
         android:orientation="horizontal" >
@@ -27,8 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text="1"
-            android:textColor="#673AB7"
-            android:textSize="18sp" />
+            android:fontFamily="casual"
+            android:textSize="18sp"
+            android:textColor="#413e5e"/>
 
         <TextView
             android:id="@+id/questions"
@@ -36,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text=" / 8"
-            android:textColor="#673AB7"
+            android:fontFamily="casual"
+            android:textColor="#413e5e"
             android:textSize="18sp" />
 
         <Space
@@ -48,8 +56,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/time"
+            android:fontFamily="casual"
             android:layout_gravity="right"
-            android:textSize="13pt"/>
+            android:textColor="#413e5e"
+            android:textSize="18sp"/>
 
     </GridLayout>
 
@@ -60,7 +70,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Which of these colors do you like most of all?"
-        android:textColor="#1F0A43"
+        android:textColor="#413e5e"
+        android:fontFamily="casual"
         android:textSize="18sp" />
 
     <GridLayout
@@ -172,7 +183,9 @@
             android:enabled="false"
             android:padding="15sp"
             android:text="The previous question"
-            android:textColor="#361247"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
             android:textSize="14sp" />
 
         <Button
@@ -186,7 +199,9 @@
             android:enabled="false"
             android:padding="15sp"
             android:text="The next question"
-            android:textColor="#361247"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
             android:textSize="14sp" />
     </GridLayout>
 

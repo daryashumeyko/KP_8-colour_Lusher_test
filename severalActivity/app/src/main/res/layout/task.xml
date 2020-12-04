@@ -7,11 +7,17 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name">
-    </TextView>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="TASK"
+        android:fontFamily="casual"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -19,8 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:fontFamily="casual"
         android:text="During the test, we will show you cards with different colors. Your task is to indicate which color you like more than others. Don't try to associate colors with anything outsider. Just choose cards that you feel more sympathetic to than the rest."
-        android:textColor="#C0B8CD"
+        android:textColor="#F5DCFA"
         android:textSize="18sp" />
 
     <Button
@@ -32,7 +39,9 @@
         android:padding="15sp"
         android:text="Start"
         android:layout_marginTop="20dp"
-        android:textColor="#361247"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
         android:textSize="18sp" />
 
 </LinearLayout>

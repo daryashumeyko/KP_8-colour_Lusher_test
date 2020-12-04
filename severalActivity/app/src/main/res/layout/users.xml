@@ -7,20 +7,26 @@
     android:collapseColumns="4"
     android:background="@color/colorPrimaryDark">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:text="Users:"
-        android:textColor="#E39BEF"
-        android:textSize="30sp" />
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="USERS"
+        android:fontFamily="casual"
+        android:layout_column="2"
+        android:layout_marginTop="20dp"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/Number"
@@ -29,7 +35,8 @@
             android:layout_gravity="left"
             android:text="№"
             android:textColor="#C0B8CD"
-            android:textSize="18sp"
+            android:textSize="14sp"
+            android:fontFamily="casual"
             android:layout_marginLeft="4dp"
             android:layout_column="0"/>
 
@@ -40,8 +47,9 @@
             android:layout_gravity="left"
             android:text="Full name"
             android:textColor="#C0B8CD"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:layout_column="1"
+            android:fontFamily="casual"
             android:layout_marginLeft="3dp"/>
 
         <TextView
@@ -50,8 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text="Email"
+            android:fontFamily="casual"
             android:textColor="#C0B8CD"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:layout_marginLeft="3dp"
             android:layout_column="2"/>
 
@@ -70,8 +79,10 @@
             android:background="@drawable/button"
             android:text="Details"
             android:layout_marginRight="3dp"
-            android:textColor="#673AB7"
-            android:textSize="15sp" />
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="14sp" />
 
     </TableRow>
 

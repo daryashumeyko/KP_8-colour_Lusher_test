@@ -8,83 +8,101 @@ android:paddingLeft="15dp"
 android:paddingRight="15dp"
 android:layout_height="match_parent">
 
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/app_name">
-</TextView>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="SIGN IN PAGE"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
 
-<TextView
-    android:id="@+id/textLogin"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Email:"
-    android:layout_marginTop="5dp"
-    android:textColor="#F5DCFA"
-    android:textSize="18sp" />
+    <TextView
+        android:id="@+id/textLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
 
-<EditText
-    android:id="@+id/editTextLogin"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/fileds"
-    android:padding="15sp"
-    android:ems="10"
-    android:inputType="text" />
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fileds"
+        android:padding="10sp"
+        android:fontFamily="casual"
+        android:ems="10"
+        android:textColor="#413e5e"
+        android:inputType="text" />
 
-<TextView
-    android:id="@+id/textPassword"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Password:"
-    android:layout_marginTop="5dp"
-    android:textColor="#F5DCFA"
-    android:textSize="18sp" />
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:fontFamily="casual"
+        android:layout_marginTop="5dp"
+        android:textColor="#F5DCFA"
+        android:textSize="14sp" />
 
-<EditText
-    android:id="@+id/editTextPassword"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:background="@drawable/fileds"
-    android:padding="15sp"
-    android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:background="@drawable/fileds"
+        android:padding="10sp"
+        android:textColor="#413e5e"
+        android:inputType="textPassword" />
 
-<Button
-    android:id="@+id/btnTestDescription"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@drawable/button"
-    android:padding="15sp"
-    android:layout_marginTop="20dp"
-    android:text="Sign in"
-    android:textColor="#361247"
-    android:textSize="18sp"/>
+    <Button
+        android:id="@+id/btnMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:layout_marginTop="20dp"
+        android:text="Sign in"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
+        android:textSize="18sp"/>
 
-<Button
-    android:id="@+id/btnFgtPsw"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@drawable/button"
-    android:padding="15sp"
-    android:layout_marginTop="10dp"
-    android:text="Forget the password"
-    android:textColor="#361247"
-    android:textSize="18sp"/>
+    <Button
+        android:id="@+id/btnFgtPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:layout_marginTop="10dp"
+        android:text="Forget the password"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
+        android:textSize="18sp"/>
 
-<Button
-    android:id="@+id/btnNewAccount"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@drawable/button"
-    android:padding="15sp"
-    android:layout_marginTop="80dp"
-    android:text="SIGN UP"
-    android:textColor="#361247"
-    android:textSize="18sp"/>
+    <Button
+        android:id="@+id/btnNewAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:layout_marginTop="80dp"
+        android:text="SIGN UP"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnAdminPage"
@@ -95,9 +113,9 @@ android:layout_height="match_parent">
         android:padding="15sp"
         android:layout_marginTop="10dp"
         android:text="Admin page"
-        android:textColor="#361247"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
         android:textSize="18sp"/>
-
-
 
 </LinearLayout>

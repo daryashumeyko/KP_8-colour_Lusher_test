@@ -56,17 +56,13 @@ public class ActivityTest extends Activity implements OnClickListener {
 
         mTimer = (TextView) findViewById(R.id.time);
 
-        //Создаем таймер обратного отсчета на 60 секунд с шагом отсчета
-        //в 1 секунду (задаем значения в миллисекундах):
         timer = new CountDownTimer(61000, 1000)  {
 
-            //Здесь обновляем текст счетчика обратного отсчета с каждой секундой
             public void onTick(long millisUntilFinished) {
                 mTimer.setText(" " + millisUntilFinished / 1000);
             }
-            //Задаем действия после завершения отсчета (высвечиваем надпись "Бабах!"):
             public void onFinish() {
-                Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -81,7 +77,7 @@ public class ActivityTest extends Activity implements OnClickListener {
                 .setPositiveButton("yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -94,6 +90,7 @@ public class ActivityTest extends Activity implements OnClickListener {
             for(int i = 0; i < 8; ++i) {
                 if(buttons[i] != (ToggleButton) button) {
                     buttons[i].setChecked(false);
+
                 }
             }
         }

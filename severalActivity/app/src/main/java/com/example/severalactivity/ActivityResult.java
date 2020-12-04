@@ -4,12 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityResult extends Activity implements OnClickListener {
     final String TAG = "ActivityResult";
@@ -27,7 +24,7 @@ public class ActivityResult extends Activity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 

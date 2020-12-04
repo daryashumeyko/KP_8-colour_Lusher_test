@@ -7,19 +7,16 @@ android:background="@color/colorPrimaryDark"
 android:paddingLeft="15dp"
 android:paddingRight="15dp"
 android:layout_height="match_parent">
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/app_name">
-</TextView>
 
 <TextView
     android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:text="Fill in the data"
-    android:textColor="#BCA3EA"
+    android:text="SIGN UP PAGE"
+    android:layout_marginTop="20dp"
+    android:textColor="#F5DCFA"
+    android:fontFamily="casual"
     android:textSize="18sp" />
 
 <TextView
@@ -27,6 +24,7 @@ android:layout_height="match_parent">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Full name:"
+    android:fontFamily="casual"
     android:layout_marginTop="3dp"
     android:textColor="#F5DCFA"
     android:textSize="14sp" />
@@ -39,6 +37,8 @@ android:layout_height="match_parent">
     android:ems="10"
     android:inputType="text"
     android:padding="15sp"
+    android:textColor="#413e5e"
+    android:fontFamily="casual"
     android:textSize="10sp" />
 
 <TextView
@@ -46,6 +46,7 @@ android:layout_height="match_parent">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Gender:"
+    android:fontFamily="casual"
     android:layout_marginTop="3dp"
     android:textColor="#F5DCFA"
     android:textSize="14sp" />
@@ -63,6 +64,7 @@ android:layout_height="match_parent">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
+        android:fontFamily="casual"
         android:textColor="#63EDFF" />
 
     <RadioButton
@@ -70,6 +72,7 @@ android:layout_height="match_parent">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Female"
+        android:fontFamily="casual"
         android:textColor="#63EDFF" />
 </RadioGroup>
 
@@ -80,6 +83,7 @@ android:layout_height="match_parent">
     android:text="Birthday:"
     android:layout_marginTop="3dp"
     android:textColor="#F5DCFA"
+    android:fontFamily="casual"
     android:textSize="14sp" />
 
 <EditText
@@ -90,6 +94,8 @@ android:layout_height="match_parent">
     android:ems="10"
     android:inputType="date"
     android:padding="15sp"
+    android:textColor="#413e5e"
+    android:fontFamily="casual"
     android:textSize="10sp" />
 
 <TextView
@@ -98,6 +104,7 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
     android:text="Email: *"
+    android:fontFamily="casual"
     android:textColor="#F5DCFA"
     android:textSize="14sp" />
 
@@ -109,6 +116,8 @@ android:layout_height="match_parent">
     android:ems="10"
     android:inputType="textEmailAddress"
     android:padding="15sp"
+    android:textColor="#413e5e"
+    android:fontFamily="casual"
     android:textSize="10sp" />
 
 <TextView
@@ -117,6 +126,7 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
     android:text="Password: *"
+    android:fontFamily="casual"
     android:textColor="#F5DCFA"
     android:textSize="14sp" />
 
@@ -128,6 +138,8 @@ android:layout_height="match_parent">
     android:ems="10"
     android:inputType="textPassword"
     android:padding="15sp"
+    android:textColor="#413e5e"
+    android:fontFamily="casual"
     android:textSize="10sp" />
 
 <TextView
@@ -136,6 +148,7 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
     android:text="Confirm password: *"
+    android:fontFamily="casual"
     android:textColor="#F5DCFA"
     android:textSize="14sp" />
 
@@ -145,12 +158,14 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:background="@drawable/fileds"
     android:ems="10"
+    android:textColor="#413e5e"
+    android:fontFamily="casual"
     android:inputType="textPassword"
     android:padding="15sp"
     android:textSize="10sp" />
 
 <Button
-    android:id="@+id/btnEntry"
+    android:id="@+id/btnMain"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -158,7 +173,9 @@ android:layout_height="match_parent">
     android:background="@drawable/button"
     android:padding="15sp"
     android:text="SIGN UP"
-    android:textColor="#361247"
-    android:textSize="16sp"></Button>
+    android:fontFamily="casual"
+    android:textStyle="bold"
+    android:textColor="#413e5e"
+    android:textSize="18sp"></Button>
 
 </LinearLayout>

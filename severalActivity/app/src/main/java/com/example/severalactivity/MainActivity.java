@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     Button btnEntry;
     Button btnExit;
-    Button btnTestDescription;
+    Button btnTask;
     //TextView resultArea;
 
     @Override
@@ -38,72 +38,30 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.main);
         btnEntry = (Button) findViewById(R.id.btnEntry);
         btnEntry.setOnClickListener(this);
-        btnTestDescription = (Button) findViewById(R.id.btnTestDescription);
-        btnTestDescription.setOnClickListener(this);
+        btnTask = (Button) findViewById(R.id.btnTask);
+        btnTask.setOnClickListener(this);
         btnExit = (Button) findViewById(R.id.btnExit);
         btnExit.setOnClickListener(this);
 
-        /*requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
-        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.custom_title_bar);
-*/
-        //resultArea = new TextView(this);
-        //resultArea.setText("Please wait.");
-        //setContentView(resultArea);
         Log.d(TAG, "MainActivity: onCreate()");
-        //new FetchSQL().execute();
     }
 
- /*   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                .setMessage("Are you sure?")
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-    private class FetchSQL extends AsyncTask<Void,Void,String> {
-        @Override
-        protected String doInBackground(Void... params) {
-            resultArea.setText("1");
-            String retval = "";
-            try {
-                Class.forName("org.postgresql.Driver");
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-                retval = e.toString();
-                resultArea.setText(retval);
-            }
-            String url = "jdbc:postgresql://192.168.43.110/lushertest?user=dbadmin&password=root";
-            Connection conn;
-            try {
-                resultArea.setText("2");
-                DriverManager.setLoginTimeout(5);
-                conn = DriverManager.getConnection(url);
-                resultArea.setText("3");
-                Statement st = conn.createStatement();
-                resultArea.setText("4");
-                String sql;
-                sql = "SELECT 1";
-                ResultSet rs = st.executeQuery(sql);
-                resultArea.setText("5");
-                while(rs.next()) {
-                    retval = rs.getString(1);
-                }
-                resultArea.setText(retval);
-                rs.close();
-                st.close();
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-                retval = e.toString();
-                resultArea.setText(retval);
-            }
-            return retval;
-        }
-        @Override
-        protected void onPostExecute(String value) {
-            Log.d(TAG, "MainActivity: onPostExecute(): " + value);
-            resultArea.setText(value);
-        }
-    } */
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+                }).setNegativeButton("no", null).show();
+    }
 
     @Override
     protected void onRestart() {
@@ -142,8 +100,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 Intent intent = new Intent(this, ActivityEntry.class);
                 startActivity(intent);
                 break;
-            case R.id.btnTestDescription:
-                Intent intent2 = new Intent(this, ActivityTestDescription.class);
+            case R.id.btnTask:
+                Intent intent2 = new Intent(this, ActivityTask.class);
                 startActivity(intent2);
                 break;
             case R.id.btnExit:

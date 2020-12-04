@@ -9,16 +9,10 @@
     android:layout_height="match_parent">
 
 
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name">
-    </TextView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <Button
@@ -29,7 +23,10 @@
             android:background="@drawable/button"
             android:padding="15sp"
             android:text="Exit"
-            android:textColor="#361247" />
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="18sp"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -43,43 +40,48 @@
             android:layout_gravity="end"
             android:background="@drawable/button"
             android:padding="15sp"
-            android:text="Entry"
-            android:textColor="#361247" />
+            android:text="sign in"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center_horizontal"
-        android:text="Hello!"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="DESCRIPTION:"
+        android:fontFamily="casual"
         android:textColor="#F5DCFA"
-        android:textSize="36sp" />
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:text="Welcome to our application!"
+        android:text="The Luscher color test is a psychological test developed by Dr. Max Luscher. Luscher's color diagnostics allows you to measure the psychophysiological state of a person, his resistance to stress, activity and communication skills. The Luscher test provides insight into the causes of psychological stress that can lead to psychological symptoms."
+        android:layout_marginTop="15dp"
         android:textColor="#F5DCFA"
-        android:textSize="36sp" />
+        android:fontFamily="casual"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/btnTestDescription"
+        android:id="@+id/btnTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button"
-        android:ems="10"
-        android:layout_marginTop="40dp"
         android:padding="15sp"
-        android:text="Phychological 8-colour Lusher test"
-        android:textColor="#361247"
-        android:textSize="25sp" />
+        android:text="Go to the test"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
+        android:textSize="18sp"></Button>
 </LinearLayout>

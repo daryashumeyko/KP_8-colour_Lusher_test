@@ -7,27 +7,24 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name">
-    </TextView>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="RESULT OF THE TEST:"
-        android:textColor="#E39BEF"
-        android:textSize="30sp" />
+        android:layout_marginTop="20dp"
+        android:text="RESULT OF THE TEST"
+        android:fontFamily="casual"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date:"
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
@@ -37,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
@@ -48,6 +46,7 @@
             android:text="Desired goals, or behavior dictated by desired goals:"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
+            android:fontFamily="casual"
             android:textSize="14sp" />
 
         <TextView
@@ -55,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
@@ -65,6 +65,7 @@
             android:layout_height="wrap_content"
             android:text="Existing situation, or behavior appropriate to the existing situation:"
             android:layout_marginTop="3dp"
+            android:fontFamily="casual"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
 
@@ -73,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
@@ -84,6 +86,7 @@
             android:text="Behavior traits that are inhibited or inappropriate for the current situation:"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
+            android:fontFamily="casual"
             android:textSize="14sp" />
 
         <TextView
@@ -91,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
@@ -102,6 +106,7 @@
             android:layout_marginTop="3dp"
             android:text="Rejected or suppressed behaviors or sources of anxiety:"
             android:textColor="#F5DCFA"
+            android:fontFamily="casual"
             android:textSize="14sp" />
 
         <TextView
@@ -109,12 +114,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:fontFamily="casual"
             android:layout_marginTop="3dp"
             android:textColor="#F5DCFA"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/textView6"
+            android:fontFamily="casual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -124,6 +131,7 @@
 
         <TextView
             android:id="@+id/text9"
+            android:fontFamily="casual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -133,6 +141,7 @@
 
         <TextView
             android:id="@+id/textView4"
+            android:fontFamily="casual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -142,6 +151,7 @@
 
         <TextView
             android:id="@+id/text78"
+            android:fontFamily="casual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -159,7 +169,9 @@
         android:padding="15sp"
         android:text="View statistics"
         android:layout_marginTop="20dp"
-        android:textColor="#361247"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
         android:textSize="18sp" />
 
 </LinearLayout>

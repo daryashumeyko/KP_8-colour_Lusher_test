@@ -7,37 +7,38 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name">
-    </TextView>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Entry"
-        android:textColor="#F0A6FF"
-        android:textSize="24sp" />
+        android:text="RECOVER THE PASSWORD"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textForgetPsw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Please enter the email that you used to sign in"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
         android:textColor="#F5DCFA"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/editTextLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/fileds"
-        android:padding="15sp"
+        android:padding="10sp"
         android:ems="10"
+        android:textColor="#413e5e"
+        android:fontFamily="casual"
         android:inputType="text" />
 
     <Button
@@ -49,7 +50,9 @@
         android:background="@drawable/button"
         android:padding="15sp"
         android:text="Send password to email"
-        android:textColor="#361247"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
         android:textSize="18sp" />
 
 </LinearLayout>

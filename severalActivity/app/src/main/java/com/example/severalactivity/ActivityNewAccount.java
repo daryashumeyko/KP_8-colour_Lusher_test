@@ -14,22 +14,22 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityNewAccount extends Activity implements OnClickListener{
     final String TAG = "ActivityNewAccount";
 
-    Button btnEntry;
+    Button btnMain;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newaccount);
-        btnEntry = (Button) findViewById(R.id.btnEntry);
-        btnEntry.setOnClickListener(this);
+        btnMain = (Button) findViewById(R.id.btnMain);
+        btnMain.setOnClickListener(this);
         Log.d(TAG, "ActivityNewAccount: onCreate()");
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onRestart() {
@@ -63,7 +63,7 @@ public class ActivityNewAccount extends Activity implements OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityTestDescription.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         Log.d(TAG, "ActivityNewAccount: onClick()");
     }

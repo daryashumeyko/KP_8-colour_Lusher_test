@@ -27,7 +27,7 @@ public class ActivityTask extends Activity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), ActivityTestDescription.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 
