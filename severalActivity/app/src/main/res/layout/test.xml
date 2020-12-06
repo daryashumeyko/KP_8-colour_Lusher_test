@@ -16,6 +16,7 @@
         android:layout_marginTop="20dp"
         android:text="TEST"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:textColor="#413e5e"
         android:textSize="18sp" />
 
@@ -91,14 +92,14 @@
             android:textColor="#FFFFFF"
             android:textOff=" "
             android:onClick="onToggleButtonClick"
-            android:textOn="Выбрано" />
+            android:textOn="Selected" />
 
         <ToggleButton
             android:id="@+id/btn2"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:textColor="#FFFFFF"
             android:onClick="onToggleButtonClick"
@@ -110,7 +111,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="5dp"
             android:onClick="onToggleButtonClick"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:textColor="#FFFFFF"
             android:backgroundTint="#EA1717" />
@@ -121,7 +122,7 @@
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:onClick="onToggleButtonClick"
             android:textColor="#FFFFFF"
@@ -136,7 +137,7 @@
             android:backgroundTint="#FFEB3B"
             android:textColor="#000000"
             android:textOff=" "
-            android:textOn="Выбрано" />
+            android:textOn="Selected" />
 
         <ToggleButton
             android:id="@+id/btn6"
@@ -145,7 +146,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:onClick="onToggleButtonClick"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:textColor="#FFFFFF"
             android:backgroundTint="#000000" />
@@ -156,7 +157,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="5dp"
             android:onClick="onToggleButtonClick"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:textColor="#FFFFFF"
             android:backgroundTint="#7C7C7C" />
@@ -168,7 +169,7 @@
             android:layout_marginLeft="20dp"
             android:onClick="onToggleButtonClick"
             android:layout_marginTop="5dp"
-            android:textOn="Выбрано"
+            android:textOn="Selected"
             android:textOff=" "
             android:textColor="#FFFFFF"
             android:backgroundTint="#0E736A" />

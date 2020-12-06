@@ -14,6 +14,7 @@ public class ActivityAdminPage extends Activity implements View.OnClickListener 
 
     Button btnUsers;
     Button btnStatistic;
+    Button btnExit;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,13 +24,26 @@ public class ActivityAdminPage extends Activity implements View.OnClickListener 
         btnUsers.setOnClickListener(this);
         btnStatistic = (Button) findViewById(R.id.btnStatistic);
         btnStatistic.setOnClickListener(this);
+        btnExit = (Button) findViewById(R.id.btnExit);
+        btnExit.setOnClickListener(this);
         Log.d(TAG, "ActivityAdminPage: onCreate()");
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                .setMessage("Are you sure?")
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+                }).setNegativeButton("no", null).show();
     }
 
     @Override
@@ -70,9 +84,23 @@ public class ActivityAdminPage extends Activity implements View.OnClickListener 
                 startActivity(intent);
                 break;
             case R.id.btnStatistic:
-                Intent intent2 = new Intent(this, ActivityStatistic.class);
+                Intent intent2 = new Intent(this, ActivityAdminPage.class);
                 startActivity(intent2);
                 break;
+            case R.id.btnExit:
+                new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                        .setMessage("Are you sure?")
+                        .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Intent intent = new Intent(Intent.ACTION_MAIN);
+                                intent.addCategory(Intent.CATEGORY_HOME);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).setNegativeButton("no", null).show();
             default:
                 break;
         }

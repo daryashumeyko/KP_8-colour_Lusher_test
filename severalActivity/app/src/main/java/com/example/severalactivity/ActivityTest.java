@@ -32,6 +32,7 @@ public class ActivityTest extends Activity implements OnClickListener {
     Button btnPrevious; Button btnNext;
     TextView numberquestion;
     private TextView mTimer;
+    String name;
     //private Chronometer mChronometer;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -39,6 +40,8 @@ public class ActivityTest extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("user").toString();
         buttons[0] = (ToggleButton) findViewById(R.id.btn1);
         buttons[1] = (ToggleButton) findViewById(R.id.btn2);
         buttons[2] = (ToggleButton) findViewById(R.id.btn3);
@@ -51,6 +54,8 @@ public class ActivityTest extends Activity implements OnClickListener {
         btnPrevious.setOnClickListener(this);
         btnNext = (Button) findViewById(R.id.btnNext);
         btnNext.setOnClickListener(this);
+        btnNext.setVisibility(View.INVISIBLE);
+        btnPrevious.setVisibility(View.INVISIBLE);
         numberquestion = (TextView) findViewById(R.id.numberquestion);
         numberquestion.setOnClickListener(this);
 
@@ -90,17 +95,27 @@ public class ActivityTest extends Activity implements OnClickListener {
             for(int i = 0; i < 8; ++i) {
                 if(buttons[i] != (ToggleButton) button) {
                     buttons[i].setChecked(false);
-
                 }
             }
         }
         if (step == 7){
             btnNext.setText("COMPLETE THE TEST");
         }
+        btnPrevious.setEnabled(checked);
+        if(checked && step > 0) {
+            btnPrevious.setVisibility(View.VISIBLE);
+        }
+        else {
+            btnPrevious.setVisibility(View.INVISIBLE);
+        }
         btnNext.setEnabled(checked);
+        if(checked) {
+            btnNext.setVisibility(View.VISIBLE);
+        }
+        else {
+            btnNext.setVisibility(View.INVISIBLE);
+        }
     }
-
-
 
     @Override
     protected void onRestart() {
@@ -154,9 +169,13 @@ public class ActivityTest extends Activity implements OnClickListener {
                         buttons[SelectedColours[i]].setChecked(false);
                     }
                 }
+                if (step == 0) {
+                    btnPrevious.setVisibility(View.INVISIBLE);
+                }
                 btnPrevious.setEnabled(step > 0);
                 numberquestion.setText(Integer.toString(question));
                 btnNext.setEnabled(true);
+                btnNext.setVisibility(View.VISIBLE);
                 btnNext.setText("THE NEXT QUESTION");
                 break;
             case R.id.btnNext:
@@ -171,10 +190,13 @@ public class ActivityTest extends Activity implements OnClickListener {
                 this.question++;
                 numberquestion.setText(Integer.toString(question));
                 btnNext.setEnabled(false);
+                btnNext.setVisibility(View.INVISIBLE);
                 btnPrevious.setEnabled(true);
+                btnPrevious.setVisibility(View.VISIBLE);
 
                 if (this.step == 8){
                     Intent intent = new Intent(this, ActivityResult.class);
+                    intent.putExtra("user", name);
                     startActivity(intent);
                     timer.cancel();
                 }

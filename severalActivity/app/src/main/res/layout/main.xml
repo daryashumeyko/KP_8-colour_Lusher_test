@@ -58,6 +58,7 @@
         android:layout_marginTop="20dp"
         android:text="DESCRIPTION:"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:textColor="#F5DCFA"
         android:textSize="18sp" />
 

@@ -13,11 +13,14 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
     final String TAG = "ActivitySeeAccount";
 
     Button btnEdit;
+    String name;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seeaccount);
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("user").toString();
         btnEdit = (Button) findViewById(R.id.btnEdit);
         btnEdit.setOnClickListener(this);
         Log.d(TAG, "ActivitySeeAccount: onCreate()");

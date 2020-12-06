@@ -15,6 +15,7 @@
         android:layout_gravity="center"
         android:text="USER RESULTS"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:textColor="#F5DCFA"
         android:textSize="18sp" />

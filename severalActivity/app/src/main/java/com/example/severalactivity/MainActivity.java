@@ -13,36 +13,30 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 public class MainActivity extends Activity implements OnClickListener {
     final String TAG = "MainActivity";
 
     Button btnEntry;
     Button btnExit;
     Button btnTask;
+    String name;
     //TextView resultArea;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("user").toString();
         btnEntry = (Button) findViewById(R.id.btnEntry);
         btnEntry.setOnClickListener(this);
         btnTask = (Button) findViewById(R.id.btnTask);
         btnTask.setOnClickListener(this);
         btnExit = (Button) findViewById(R.id.btnExit);
         btnExit.setOnClickListener(this);
-
+        if (name.equals("darya")){
+            btnEntry.setText("My account");
+        }
         Log.d(TAG, "MainActivity: onCreate()");
     }
 
@@ -97,11 +91,20 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnEntry:
-                Intent intent = new Intent(this, ActivityEntry.class);
-                startActivity(intent);
+                if (name.isEmpty()){
+                    Intent intent = new Intent(this, ActivityEntry.class);
+                    intent.putExtra("user", name);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(this, ActivitySeeAccount.class);
+                    intent.putExtra("user", name);
+                    startActivity(intent);
+                }
                 break;
             case R.id.btnTask:
                 Intent intent2 = new Intent(this, ActivityTask.class);
+                intent2.putExtra("user", name);
                 startActivity(intent2);
                 break;
             case R.id.btnExit:

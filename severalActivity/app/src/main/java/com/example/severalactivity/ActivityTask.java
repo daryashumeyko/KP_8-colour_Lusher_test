@@ -15,11 +15,14 @@ public class ActivityTask extends Activity implements OnClickListener {
     final String TAG = "ActivityTask";
 
     Button btnTest;
+    String name;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task);
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("user").toString();
         btnTest = (Button) findViewById(R.id.btnTest);
         btnTest.setOnClickListener(this);
         Log.d(TAG, "ActivityTask: onCreate()");
@@ -64,6 +67,7 @@ public class ActivityTask extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, ActivityTest.class);
+        intent.putExtra("user", name);
         startActivity(intent);
         Log.d(TAG, "ActivityTask: onClick()");
     }

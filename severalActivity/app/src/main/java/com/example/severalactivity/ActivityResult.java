@@ -12,11 +12,14 @@ public class ActivityResult extends Activity implements OnClickListener {
     final String TAG = "ActivityResult";
 
     Button btnStatistic;
+    String name;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result);
+        Bundle arguments = getIntent().getExtras();
+        name = arguments.get("user").toString();
         btnStatistic = (Button) findViewById(R.id.btnStatistic);
         btnStatistic.setOnClickListener(this);
         Log.d(TAG, "ActivityResult: onCreate()");
@@ -25,6 +28,7 @@ public class ActivityResult extends Activity implements OnClickListener {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("user", name);
         startActivity(intent);
     }
 
@@ -66,6 +70,7 @@ public class ActivityResult extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, ActivityResult.class);
+        intent.putExtra("user", name);
         startActivity(intent);
         Log.d(TAG, "ActivityResult: onClick()");
     }

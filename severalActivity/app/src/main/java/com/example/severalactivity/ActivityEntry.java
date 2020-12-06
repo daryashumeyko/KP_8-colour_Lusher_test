@@ -10,9 +10,11 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+//import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.widget.Toolbar;
 
 public class ActivityEntry extends Activity implements OnClickListener{
     final String TAG = "ActivityEntry";
@@ -20,7 +22,10 @@ public class ActivityEntry extends Activity implements OnClickListener{
     Button btnMain;
     Button btnFgtPsw;
     Button btnNewAccount;
-    Button btnAdminPage;
+    EditText email;
+    EditText password;
+    TextView message;
+    Button entry;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,9 +37,11 @@ public class ActivityEntry extends Activity implements OnClickListener{
         btnFgtPsw.setOnClickListener(this);
         btnNewAccount = (Button) findViewById(R.id.btnNewAccount);
         btnNewAccount.setOnClickListener(this);
-        btnAdminPage = (Button) findViewById(R.id.btnAdminPage);
-        btnAdminPage.setOnClickListener(this);
-
+        email = (EditText) findViewById(R.id.editTextLogin);
+        password = (EditText) findViewById(R.id.editTextPassword);
+        message = (TextView) findViewById(R.id.message);
+        entry = (Button) findViewById(R.id.btnEntry);
+        //entry.setOnClickListener(this);
         Log.d(TAG, "ActivityEntry: onCreate()");
     }
 
@@ -82,16 +89,28 @@ public class ActivityEntry extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.btnMain:
-                Intent intent2 = new Intent(this, MainActivity.class);
-                startActivity(intent2);
+                if (email.getText().toString().equals("darya@gmail.com") && password.getText().toString().equals("123")){
+                    Intent intent1 = new Intent(this, MainActivity.class);
+                    intent1.putExtra("user", "darya");
+                    startActivity(intent1);
+                    //entry.setText("My account");
+                }
+                else if (email.getText().toString().equals("admin@gmail.com") && password.getText().toString().equals("456")){
+                    Intent intent2 = new Intent(this, ActivityAdminPage.class);
+                    intent2.putExtra("user", "admin");
+                    startActivity(intent2);
+                    //entry.setVisibility(View.INVISIBLE);
+                }
+                else if (email.getText().toString().isEmpty() && password.getText().toString().isEmpty()){
+                        message.setText("Fill in your login and password!");
+                }
+                else {
+                    message.setText("You filled in wrong login or password!");
+                }
                 break;
             case R.id.btnNewAccount:
                 Intent intent3 = new Intent(this, ActivityNewAccount.class);
                 startActivity(intent3);
-                break;
-            case R.id.btnAdminPage:
-                Intent intent4 = new Intent(this, ActivityAdminPage.class);
-                startActivity(intent4);
                 break;
             default:
                 break;

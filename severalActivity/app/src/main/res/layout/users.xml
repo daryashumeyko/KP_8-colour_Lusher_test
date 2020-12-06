@@ -17,6 +17,7 @@
         android:layout_gravity="center"
         android:text="USERS"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:layout_column="2"
         android:layout_marginTop="20dp"
         android:textColor="#F5DCFA"
