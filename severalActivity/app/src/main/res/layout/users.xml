@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:collapseColumns="4"
+    android:collapseColumns="3"
     android:background="@color/colorPrimaryDark">
 
     <TableRow
@@ -18,8 +18,9 @@
         android:text="USERS"
         android:fontFamily="casual"
         android:textStyle="bold"
-        android:layout_column="2"
+        android:layout_column="1"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
         android:textColor="#F5DCFA"
         android:textSize="18sp" />
     </TableRow>
@@ -36,34 +37,23 @@
             android:layout_gravity="left"
             android:text="№"
             android:textColor="#C0B8CD"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:fontFamily="casual"
             android:layout_marginLeft="4dp"
             android:layout_column="0"/>
 
         <TextView
             android:id="@+id/FullName"
-            android:layout_width="110dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text="Full name"
             android:textColor="#C0B8CD"
-            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:layout_column="1"
             android:fontFamily="casual"
             android:layout_marginLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/Email"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="Email"
-            android:fontFamily="casual"
-            android:textColor="#C0B8CD"
-            android:textSize="14sp"
-            android:layout_marginLeft="3dp"
-            android:layout_column="2"/>
 
     </TableRow>
 
@@ -71,11 +61,174 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/Number1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="1"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:fontFamily="casual"
+            android:layout_marginLeft="4dp"
+            android:layout_column="0"/>
+
+        <TextView
+            android:id="@+id/Darya"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Darya Shumeyko"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:layout_column="1"
+            android:fontFamily="casual"
+            android:layout_marginLeft="3dp"/>
+
+
         <Button
             android:id="@+id/btnDetails"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_column="3"
+            android:layout_height="27dp"
+            android:layout_column="2"
+            android:layout_gravity="right"
+            android:background="@drawable/button"
+            android:text="Details"
+            android:layout_marginRight="3dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Number2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="2"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:fontFamily="casual"
+            android:layout_marginLeft="4dp"
+            android:layout_column="0"/>
+
+        <TextView
+            android:id="@+id/Alexandr"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Alexandr Lukin"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:layout_column="1"
+            android:fontFamily="casual"
+            android:layout_marginLeft="3dp"/>
+
+
+        <Button
+            android:id="@+id/btnDetails2"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_column="2"
+            android:layout_gravity="right"
+            android:background="@drawable/button"
+            android:text="Details"
+            android:layout_marginRight="3dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Number3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="3"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:fontFamily="casual"
+            android:layout_marginLeft="4dp"
+            android:layout_column="0"/>
+
+        <TextView
+            android:id="@+id/Olga"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Olga Manina"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:layout_column="1"
+            android:fontFamily="casual"
+            android:layout_marginLeft="3dp"/>
+
+
+        <Button
+            android:id="@+id/btnDetails3"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_column="2"
+            android:layout_gravity="right"
+            android:background="@drawable/button"
+            android:text="Details"
+            android:layout_marginRight="3dp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#413e5e"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Number4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="4"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:fontFamily="casual"
+            android:layout_marginLeft="4dp"
+            android:layout_column="0"/>
+
+        <TextView
+            android:id="@+id/Timofey"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Timofey Kruglov"
+            android:textColor="#C0B8CD"
+            android:textSize="16sp"
+            android:layout_column="1"
+            android:fontFamily="casual"
+            android:layout_marginLeft="3dp"/>
+
+
+        <Button
+            android:id="@+id/btnDetails4"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_column="2"
             android:layout_gravity="right"
             android:background="@drawable/button"
             android:text="Details"

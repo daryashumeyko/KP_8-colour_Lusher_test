@@ -33,6 +33,7 @@ public class ActivityTest extends Activity implements OnClickListener {
     TextView numberquestion;
     private TextView mTimer;
     String name;
+    int[] result = new int[8];
     //private Chronometer mChronometer;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -149,9 +150,6 @@ public class ActivityTest extends Activity implements OnClickListener {
     }
     @Override
     public void onClick(View v) {
-        //mChronometer.setBase(SystemClock.elapsedRealtime() + 1000 * 5);
-        //mChronometer.start();
-
         switch (v.getId()){
             case R.id.btnPrevious:
                 step--;
@@ -183,6 +181,7 @@ public class ActivityTest extends Activity implements OnClickListener {
                     if(buttons[i].isChecked()) {
                         SelectedColours[this.step] = i;
                         buttons[i].setVisibility(View.INVISIBLE);
+                        result[step] = i + 1;
                         break;
                     }
                 }
@@ -197,6 +196,11 @@ public class ActivityTest extends Activity implements OnClickListener {
                 if (this.step == 8){
                     Intent intent = new Intent(this, ActivityResult.class);
                     intent.putExtra("user", name);
+                    String res = "";
+                    for (int i = 0; i < 8; ++i) {
+                        res += result[i];
+                    }
+                    intent.putExtra("result", res);
                     startActivity(intent);
                     timer.cancel();
                 }

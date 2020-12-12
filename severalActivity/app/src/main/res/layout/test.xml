@@ -95,7 +95,7 @@
             android:textOn="Selected" />
 
         <ToggleButton
-            android:id="@+id/btn2"
+            android:id="@+id/btn5"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
@@ -117,7 +117,7 @@
             android:backgroundTint="#EA1717" />
 
         <ToggleButton
-            android:id="@+id/btn4"
+            android:id="@+id/btn6"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
@@ -129,7 +129,7 @@
             android:backgroundTint="#884632" />
 
         <ToggleButton
-            android:id="@+id/btn5"
+            android:id="@+id/btn4"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginTop="5dp"
@@ -140,7 +140,7 @@
             android:textOn="Selected" />
 
         <ToggleButton
-            android:id="@+id/btn6"
+            android:id="@+id/btn7"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
@@ -152,7 +152,7 @@
             android:backgroundTint="#000000" />
 
         <ToggleButton
-            android:id="@+id/btn7"
+            android:id="@+id/btn8"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginTop="5dp"
@@ -163,7 +163,7 @@
             android:backgroundTint="#7C7C7C" />
 
         <ToggleButton
-            android:id="@+id/btn8"
+            android:id="@+id/btn2"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="20dp"
