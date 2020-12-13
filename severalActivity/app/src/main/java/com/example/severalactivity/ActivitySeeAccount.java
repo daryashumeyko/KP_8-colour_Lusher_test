@@ -13,6 +13,7 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
     final String TAG = "ActivitySeeAccount";
 
     Button btnEdit;
+    Button btnRes;
     String name;
 
     @Override
@@ -23,6 +24,8 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
         name = arguments.get("user").toString();
         btnEdit = (Button) findViewById(R.id.btnEdit);
         btnEdit.setOnClickListener(this);
+        btnRes = (Button) findViewById(R.id.btnResult);
+        btnRes.setOnClickListener(this);
         Log.d(TAG, "ActivitySeeAccount: onCreate()");
     }
 
@@ -64,8 +67,18 @@ public class ActivitySeeAccount extends Activity implements OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityEditAccount.class);
-        startActivity(intent);
+        switch (v.getId()){
+            case R.id.btnEdit:
+                Intent intent = new Intent(this, ActivityEditAccount.class);
+                startActivity(intent);
+                break;
+            case R.id.btnResult:
+                Intent intent2 = new Intent(this, ActivityResultUser.class);
+                startActivity(intent2);
+                break;
+            default:
+                break;
+        }
         Log.d(TAG, "ActivitySeeAccount: onClick()");
     }
 }

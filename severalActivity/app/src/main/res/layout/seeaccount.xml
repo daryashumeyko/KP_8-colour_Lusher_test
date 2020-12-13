@@ -130,4 +130,18 @@
         android:textColor="#413e5e"
         android:textSize="18sp"></Button>
 
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:padding="15sp"
+        android:text="My results"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#413e5e"
+        android:textSize="18sp"></Button>
+
 </LinearLayout>

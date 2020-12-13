@@ -72,6 +72,10 @@
             android:name=".ActivityEditAccount"
             android:label="ActivityEditAccount">
         </activity>
+        <activity
+            android:name=".ActivityResultUser"
+            android:label="ActivityResultUser">
+        </activity>
     </application>
 
 </manifest>

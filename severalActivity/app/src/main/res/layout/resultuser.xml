@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="USER RESULTS"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#F5DCFA"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:fontFamily="casual"
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text780"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12.12.2020"
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Конфликтное сочетание разнонаправленных тенденций — высокой мотивации избегания неуспеха и мотивации достижения. Выраженная склонность к непосредственной самореализации сталкивается со столь же высокой тенденцией к избеганию конфликтов, повышенным контролем над своими чувствами и поведением. Уравновешивая друг друга, эти тенденции создают внешне гармоничный поведенческий рисунок, чреватый физиологическими расстройствами. Эротичность в сфере влечения к противоположному полу сочетается с эмпатийностью (умением сопереживать), что может служить основой для гармоничных отношений."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Неустойчивость, неуверенность в себе, боязливость, тревожные опасения непреодолимости существующих проблем; истинная причина конфликта — внутренняя — не осознается."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тщательно скрываемая обидчивость, стремление занять гибкую и уступчивую позицию."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Для сохранения социальных связей и теплых отношений проявляется уступчивость."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textDate2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:fontFamily="casual"
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text7802"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13.12.2020"
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textName2"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Смешанный, эмоционально неустойчивый рисунок индивидуально-личностных свойств, выявляющий высокую подверженность внешним (средовым) воздействиям. Ранимость, чувствительность, зависимость от значимых других, повышенный самоконтроль и конформность установок сочетаются с тенденцией к легкой смене настроения и устремлений, вживаемостью в разные социальные роли. Склонность к экзальтации, потребность нравиться окружающим. Энтузиазм и стремление к сопричастности интересам референтной группы легко сменяются тенденцией уйти от излишней ответственности, участие и сопереживание более значимы, чем конкретные цели. В работе значение придается больше самому процессу, как удовлетворяющему ведущим тенденциям, чем ее окончательному результату. Большое значение придается произведенному впечатлению и дружелюбным отношениям с окружающими."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text42"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Недоверчивость, переживание чувства обиды, стремление улучшить впечатление о себе в глазах значимых окружающих. Сензитивность в отношении критических замечаний в свой адрес. Иррациональные способы противодействия недоброжелательности окружающих. Склонность преувеличивать враждебность отношения к себе других. Изобретательность и богатство фантазии. Стремление упрочить свою позицию."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text62"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="В связи с обстоятельствами, ограничивающими свободу действий, вынужденный отказ от самореализации."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text72"
+                android:fontFamily="casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Стресс, вызванный подавлением физиологических потребностей. Неудовлетворенное желание найти признание и общность интересов в кругу значимых окружающих вызывает повышенную напряженность самоконтроля. Сдерживаемая чувственность, потребность в уважении и внимательном отношении."
+                android:layout_marginTop="3dp"
+                android:textColor="#F5DCFA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
